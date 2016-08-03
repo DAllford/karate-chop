@@ -1,4 +1,4 @@
-package day1.parametersuppliers;
+package chopper.parametersuppliers;
 
 import org.junit.experimental.theories.ParameterSignature;
 import org.junit.experimental.theories.ParameterSupplier;

@@ -1,5 +1,6 @@
-package day1;
+package chopper;
 
+import chopper.day1.RecursiveChopper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -12,11 +13,14 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class ChopperParameterisedTests {
+public abstract class ChopperParameterisedTests {
 
 	private int expectedResult;
 	private int target;
 	private List<Integer> listToSearch;
+	protected Chopper chopper = getChopper();
+
+	protected abstract Chopper getChopper();
 
 	public ChopperParameterisedTests(int expectedResult, int target, List<Integer> listToSearch) {
 		this.expectedResult = expectedResult;
@@ -46,7 +50,7 @@ public class ChopperParameterisedTests {
 
 	@Test
 	public void binaryChopChecker () {
-		assertEquals(expectedResult, Chopper.chop(target, listToSearch));
+		assertEquals(expectedResult, chopper.findInList(target, listToSearch));
 	}
 
 }
