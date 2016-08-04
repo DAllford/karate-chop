@@ -24,7 +24,6 @@ public class IterativeChopper implements Chopper {
 				end = midPointIndex - 1;
 			}
 		}
-
 		return -1;
 	}
 }

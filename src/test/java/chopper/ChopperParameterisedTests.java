@@ -1,6 +1,5 @@
 package chopper;
 
-import chopper.day1.RecursiveChopper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
