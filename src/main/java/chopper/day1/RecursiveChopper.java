@@ -5,9 +5,6 @@ import chopper.Chopper;
 import java.util.List;
 
 public class RecursiveChopper implements Chopper {
-
-	private static final int ABSENT_RETURN = -1;
-
 	public int findInList(Integer target, List<Integer> data) {
 		return findInListWithAccumulator(target, data, 0);
 	}
