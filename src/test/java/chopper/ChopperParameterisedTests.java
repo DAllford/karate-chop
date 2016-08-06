@@ -42,6 +42,8 @@ public abstract class ChopperParameterisedTests {
 				{ 0, 12, Arrays.asList(12, 15, 20)},
 				{ 2, 12, Arrays.asList(1, 11, 12)},
 
+				{ -1, Integer.MAX_VALUE, Arrays.asList(3)},
+
 				{4, 19, Arrays.asList(-2, -1, 3, 5, 19, 20, 23, 30, 40, 180, 999)}
 
 		});
