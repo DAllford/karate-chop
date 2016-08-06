@@ -30,5 +30,14 @@ These invariants were relatively easy to maintain.
 
 I also ran into a problem when handling empty lists where I tried to access the 0th element. Easy to resolve and picked up in my tests.
 
+Day 4 Errors Log:
+This was really fun. I started by taking the day 3 solution and unfolding the recursion. I then replaced the while loop with a forEach loop, and replaced conditional addition by using compareTo. 
+
+I added an element into the list so that I did not have to check if the list was empty when accessing it. I appended this element so that if it was accessed in the binary chop I knew that we had finished the algorithm unsuccessfully. 
+
+I made an implict assumption that n+1>n which led to an out of bounds exception. I identified this fallacy and wrote a unit test (where the target we are searching for is Integer.MAX_VALUE) and made it pass by moving when I added into the list. The bug was quite subtle, and resulted from implementation specific details. Fixed in a174b5dae864be531c6d331a34fecd1e347b2ff4. 
+
+This has been quite difficult today because it is not a natural way for me to write code. If I had not developer the radius solution yesterday I would have struggled even more becuase I could take the out by one errors I fixed yesterday and apply that directly here.
+
 Note: I havent yet been saved by my parameterised or theory tests as once I have got the basic tests passing the rest 
 have all gone through with no problem.
